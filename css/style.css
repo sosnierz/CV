@@ -1,5 +1,50 @@
-div {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
+.navUp {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: lang;
+}
+
+header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: baner;
+}
+
+nav {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: navigation;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: page;
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body div.pl {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  -ms-grid-rows: 60px auto 1fr 60px;
+      grid-template-rows: 60px auto 1fr 60px;
+      grid-template-areas: "lang lang" "baner baner" "navigation page" "footer footer";
+  max-width: 1900px;
+  min-height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

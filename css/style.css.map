@@ -1,8 +1,14 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,GAAG,CAAC;EACA,WAAW,EAAE,4BAA4B;EACzC,KAAK,EAAE,KAAK;CAAG",
+    "mappings": "AEAA,AAAA,MAAM,CAAC;EACH,SAAS,EAAE,IAAI;CAAG;;ACDtB,AAAA,MAAM,CAAC;EACH,SAAS,EAAE,KAAK;CAAG;;ACDvB,AAAA,GAAG,CAAC;EACA,SAAS,EAAE,UAAU;CAAG;;ACD5B,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,IAAI;CAAG;;ACDtB,AAAA,MAAM,CAAC;EACH,SAAS,EAAE,MAAM;CAAG;;ANMxB,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CAOgB;;AAT9B,AAGI,IAHA,CAGA,GAAG,AAAA,GAAG,CAAC;EACH,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,SAAS;EAChC,kBAAkB,EAAE,kBAAkB;EACtC,mBAAmB,EAAE,2DAA2D;EAChF,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,KAAK;CAAG",
     "sources": [
-        "../sass/style.sass"
+        "../sass/style.sass",
+        "../sass/_variables.sass",
+        "../sass/_navUp.sass",
+        "../sass/_header.sass",
+        "../sass/_nav.sass",
+        "../sass/_main.sass",
+        "../sass/_footer.sass"
     ],
     "names": [],
     "file": "style.css"

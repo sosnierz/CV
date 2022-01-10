@@ -1,0 +1,14 @@
+.navUp {
+    grid-area: lang;
+    position: relative;
+    background-color: $white;
+
+    img {
+        height: $max-font;
+        width: $max-font;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+    }
+}

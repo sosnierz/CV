@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'mixins';
+@import 'navUp';
+@import 'header';
+@import 'nav';
+@import 'main';
+@import 'footer';
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+    div.pl {
+        @include grid-template;
+        background-color: $color-main;
+        font-family: $font-main;
+        overflow: hidden;
+
+
+    }
+}

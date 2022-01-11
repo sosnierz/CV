@@ -15,10 +15,10 @@ main {
     }
 
     section.about-me {
-        height: 95vh;
+        min-height: 95vh;
 
         article {
-            max-height: 95vh;
+            min-height: 90vh;
 
 
             div {
@@ -55,7 +55,7 @@ main {
 
 
     section.projects {
-        min-height: 39vh;
+
 
         .projects-contains {
             @include flex;
@@ -63,19 +63,51 @@ main {
             flex-wrap: wrap;
             margin: 60px auto;
 
+
             div.project {
                 display: flex;
+                height: 250px;
                 margin-top: 30px;
-                border: 5px outset $teal;
+                background: $gradient;
+                padding: 10px;
+
+
+
 
                 div {
                     flex-basis: 50%;
                 }
 
                 img {
-                    width: 85%;
+                    min-width: 90%;
+                    max-height: 95%;
                 }
+
+                .about {
+                    color: $white;
+                    padding: 10px 20px 20px 0;
+                    text-align: left;
+
+
+                    h2 {
+                        font-size: 18px;
+                        border-bottom: 2px solid $white;
+                        margin-bottom: 12px;
+                        padding-bottom: 6px;
+                        text-indent: 20px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        padding-left: 20px;
+                    }
+                }
+
+
+
+
             }
+
         }
     }
 

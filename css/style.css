@@ -140,11 +140,11 @@ main article {
 }
 
 main section.about-me {
-  height: 95vh;
+  min-height: 95vh;
 }
 
 main section.about-me article {
-  max-height: 95vh;
+  min-height: 90vh;
 }
 
 main section.about-me article div {
@@ -178,10 +178,6 @@ main section.about-me article div.about-me-txt p:last-of-type::first-letter {
   font-size: 45px;
 }
 
-main section.projects {
-  min-height: 39vh;
-}
-
 main section.projects .projects-contains {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,8 +199,10 @@ main section.projects .projects-contains div.project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 250px;
   margin-top: 30px;
-  border: 5px outset #1eb79c;
+  background: linear-gradient(135deg, #1abc9c 0%, #8e44ad 100%);
+  padding: 10px;
 }
 
 main section.projects .projects-contains div.project div {
@@ -213,7 +211,27 @@ main section.projects .projects-contains div.project div {
 }
 
 main section.projects .projects-contains div.project img {
-  width: 85%;
+  min-width: 90%;
+  max-height: 95%;
+}
+
+main section.projects .projects-contains div.project .about {
+  color: white;
+  padding: 10px 20px 20px 0;
+  text-align: left;
+}
+
+main section.projects .projects-contains div.project .about h2 {
+  font-size: 18px;
+  border-bottom: 2px solid white;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  text-indent: 20px;
+}
+
+main section.projects .projects-contains div.project .about p {
+  font-size: 12px;
+  padding-left: 20px;
 }
 
 main section.skills {

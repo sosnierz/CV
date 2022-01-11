@@ -7,3 +7,10 @@
     min-height: 100vh;
     margin: 0 auto;
 }
+
+@mixin flex {
+    display: flex;
+
+    justify-content: space-around;
+
+}

@@ -1,4 +1,41 @@
 main {
     grid-area: page;
-    background-color: $white;
+
+    section.about-me {
+        position: relative;
+        min-height: 100%;
+
+
+        h1 {
+            font-size: $max-font;
+            text-transform: uppercase;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        article {
+            @include flex;
+
+            div.image {
+
+                flex-basis: 50%;
+                width: 330px;
+                height: 350px;
+                margin-left: $size-medium;
+                background-image: url('../images/ns.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                border-radius: 50%;
+
+            }
+
+            div {
+                margin-left: 20px;
+            }
+
+        }
+
+
+    }
 }

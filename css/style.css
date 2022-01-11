@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,100;1,800&display=swap");
-.navUp {
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:ital,wght@0,400;1,100;1,800&display=swap");
+nav.navUp {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -8,7 +9,7 @@
   background-color: white;
 }
 
-.navUp img {
+nav.navUp img {
   height: 28px;
   width: 28px;
   position: absolute;
@@ -60,31 +61,190 @@ header i {
   color: white;
 }
 
-nav {
+nav.nav-menu {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: navigation;
-  background-color: white;
-}
-
-nav div {
+  background-color: #1eb79c;
+  margin-right: 10px;
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
-nav div ul.nav-menu {
+nav.nav-menu div {
   position: fixed;
+}
+
+nav.nav-menu div i.fa-bars,
+nav.nav-menu div ul {
+  position: absolute;
+}
+
+nav.nav-menu div i.fa-bars {
+  font-size: 42px;
+  color: white;
+  top: 20px;
+  left: 10px;
+}
+
+nav.nav-menu div ul {
   top: 100px;
   left: 0;
+  font-size: 28px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+nav.nav-menu div ul li {
+  max-width: 300px;
+  margin-top: 30px;
+}
+
+nav.nav-menu div ul li a {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
 }
 
 main {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: page;
-  background-color: white;
+}
+
+main .horizontal {
+  border: none;
+  height: 4px;
+  border-bottom: 1px solid #1f1209;
+  -webkit-box-shadow: rgba(64, 150, 162, 0.25) 0px 14px 28px, rgba(30, 183, 156, 0.22) 0px 10px 10px;
+          box-shadow: rgba(64, 150, 162, 0.25) 0px 14px 28px, rgba(30, 183, 156, 0.22) 0px 10px 10px;
+  width: 90%;
+}
+
+main section h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+}
+
+main article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  margin-top: 60px;
+}
+
+main section.about-me {
+  height: 95vh;
+}
+
+main section.about-me article {
+  max-height: 95vh;
+}
+
+main section.about-me article div {
+  width: 50%;
+}
+
+main section.about-me article div.image img {
+  display: block;
+  width: 50%;
+  height: 55%;
+  border-radius: 50%;
+  margin: 20% auto;
+}
+
+main section.about-me article div.about-me-txt {
+  padding: 50px;
+  text-align: justify;
+}
+
+main section.about-me article div.about-me-txt p,
+main section.about-me article div.about-me-txt ul {
+  letter-spacing: 1px;
+  line-height: 40px;
+}
+
+main section.about-me article div.about-me-txt p:first-of-type::first-letter,
+main section.about-me article div.about-me-txt p:last-of-type::first-letter {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  color: #1eb79c;
+  font-size: 45px;
+}
+
+main section.projects {
+  min-height: 39vh;
+}
+
+main section.projects .projects-contains {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 60px auto;
+}
+
+main section.projects .projects-contains div.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  border: 5px outset #1eb79c;
+}
+
+main section.projects .projects-contains div.project div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+main section.projects .projects-contains div.project img {
+  width: 85%;
+}
+
+main section.skills {
+  min-height: 49vh;
+}
+
+main section.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+main section.skills ul li {
+  display: inline-block;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+main section.experience h3 {
+  font-size: 10px;
 }
 
 footer {
@@ -112,7 +272,6 @@ body div.pl {
   max-width: 1800px;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: #113c49;
   font-family: "Raleway", sans-serif;
   overflow: hidden;
 }

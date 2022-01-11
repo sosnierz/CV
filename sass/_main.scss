@@ -1,41 +1,107 @@
 main {
     grid-area: page;
 
+    .horizontal {
+        @include horizontal;
+    }
+
+    section h1 {
+        @include heading;
+    }
+
+    article {
+        @include flex;
+        margin-top: 60px;
+    }
+
     section.about-me {
-        position: relative;
-        min-height: 100%;
-
-
-        h1 {
-            font-size: $max-font;
-            text-transform: uppercase;
-            font-weight: 800;
-            text-align: center;
-        }
+        height: 95vh;
 
         article {
-            @include flex;
+            max-height: 95vh;
 
-            div.image {
-
-                flex-basis: 50%;
-                width: 330px;
-                height: 350px;
-                margin-left: $size-medium;
-                background-image: url('../images/ns.jpg');
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center;
-                border-radius: 50%;
-
-            }
 
             div {
-                margin-left: 20px;
+                width: 50%;
             }
 
+            div.image img {
+                display: block;
+                width: 50%;
+                height: 55%;
+                border-radius: 50%;
+                margin: 20% auto;
+
+            }
+
+            div.about-me-txt {
+                padding: $size-medium;
+                text-align: justify;
+
+
+                p,
+                ul {
+                    letter-spacing: 1px;
+                    line-height: 40px;
+                }
+
+                p:first-of-type::first-letter,
+                p:last-of-type::first-letter {
+                    @include firstLetter;
+                }
+            }
         }
-
-
     }
+
+
+    section.projects {
+        min-height: 39vh;
+
+        .projects-contains {
+            @include flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 60px auto;
+
+            div.project {
+                display: flex;
+                margin-top: 30px;
+                border: 5px outset $teal;
+
+                div {
+                    flex-basis: 50%;
+                }
+
+                img {
+                    width: 85%;
+                }
+            }
+        }
+    }
+
+    section.skills {
+        min-height: 49vh;
+
+        ul {
+            @include flex;
+            align-content: stretch;
+            flex-wrap: wrap;
+            margin-top: 40px;
+
+
+            li {
+                display: inline-block;
+                flex-basis: 33%;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    section.experience {
+        h3 {
+            font-size: 10px;
+        }
+    }
+
 }

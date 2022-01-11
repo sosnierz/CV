@@ -1,19 +1,24 @@
 nav.nav-menu {
     grid-area: navigation;
     background-color: $teal;
-    opacity: 0.4;
+    // opacity: 0.4;
     margin-right: 10px;
+    position: relative;
 
 
     div {
-        position: relative;
+        position: fixed;
 
+        i.fa-bars,
+        ul {
+            position: absolute;
+        }
 
         i.fa-bars {
-            font-size: $max-font;
+            font-size: $max-font*1.5;
             color: $white;
-            position: fixed;
-            top: 60px;
+
+            top: 20px;
             left: 10px;
 
         }
@@ -22,7 +27,7 @@ nav.nav-menu {
 
         ul {
 
-            position: fixed;
+
             top: 100px;
             left: 0;
             font-size: $max-font;

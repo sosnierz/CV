@@ -5,6 +5,7 @@ header {
     background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
     height: $height-img;
 
+
     button {
         position: absolute;
         top: 50%;
@@ -23,7 +24,7 @@ header {
         img {
             margin-top: 20px;
         }
-   }
+    }
 
     i {
         position: absolute;

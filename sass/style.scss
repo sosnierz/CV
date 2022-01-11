@@ -15,7 +15,7 @@ body {
 
     div.pl {
         @include grid-template;
-        background-color: $color-main;
+
         font-family: $font-main;
         overflow: hidden;
 

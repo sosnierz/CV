@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,100;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:ital,wght@0,400;1,100;1,800&display=swap');
 
 // size
 $width-max-template:1800px;
 $max-font:28px;
+$size-medium:50px;
 $height-img:95vh;
 
 
@@ -12,11 +14,12 @@ $color-main:rgb(17, 60, 73);
 $color-light:rgb(122, 225, 243);
 $black:rgb(9, 29, 34);
 $white:white;
+$teal:rgb(30, 183, 156);
 
 
 
-
-
-
+// fonts
 $font-main:'Raleway',
 sans-serif;
+$font-letter:'Dancing Script',
+cursive;

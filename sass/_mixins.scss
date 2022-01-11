@@ -7,3 +7,35 @@
     min-height: 100vh;
     margin: 0 auto;
 }
+
+@mixin flex {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+
+@mixin firstLetter {
+    font-family: $font-letter;
+    font-weight: bold;
+    color: $teal;
+    font-size: 45px;
+}
+
+// horizontal line
+@mixin horizontal {
+    border: none;
+    height: 4px;
+    border-bottom: 1px solid #1f1209;
+    box-shadow: rgba(64, 150, 162, 0.25) 0px 14px 28px, rgba(30, 183, 156, 0.22) 0px 10px 10px;
+    width: 90%;
+
+}
+
+// heading
+@mixin heading {
+    font-size: $max-font*1.5;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+}

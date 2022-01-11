@@ -14,6 +14,7 @@
 <body>
     <div class="pl">
         <nav class="navUp">
+
             <img src="images/pl.png">
             <img src="images/uk.png">
         </nav>
@@ -21,73 +22,148 @@
             <button>Moje projekty<br><img src="images/portfolio.png"></button>
             <i class="fas fa-chevron-down"></i>
         </header>
-        <nav>
+        <nav class="nav-menu">
             <div>
                 <i class="fas fa-bars"></i>
-                <ul class="nav-menu">
+                <ul>
                     <li><a href="#">O mnie</a></li>
-                    <li><a href="#">Projekty</a></li>
+                    <li><a href="#">Projekty <br> Umiejętności</a></li>
                     <li><a href="#">Doświadczenie zawodowe</a></li>
-                    <li><a href="#">Umiejętności</a></li>
-                    <li><a href="#">Kontakt</a></li>
 
+                    <li><a href="#">Kontakt</a></li>
                 </ul>
             </div>
         </nav>
         <main>
-            <section>
-                <h1>Natalia Sośnierz</h1>
-                <img src="images/ns.jpg">
-                <p> Nazywam się Natalia Sośnierz i pragnę na co dzień zajmować się programowaniem stron
-                    internetowych.
-                    Jestem absolwentką studiów I i II stopnia kierunku Fizyka medyczna na Wydziale Fizyki UAM w
-                    Poznaniu.<br> Jestem osobą, która od zawsze uwielbiała przedmioty ścisłe, rozwiązywanie zagadek
-                    oraz
-                    poszukiwanie niecodziennych rozwiązań. Programowanie zaszczepił we mnie znajomy 4 lata temu,
-                    wówczas
-                    było to zajęcie typowo hobbistyczne, jednak pół roku temu postanowiłam zacząć rozwijać się w tej
-                    dziedzinie.<br> W chwili obecnej większość mojej uwagi koncentruję na poznawaniu nowych
-                    technologii,
-                    takich jak.: JavaScript, jQuery, React, które pozwolą mi na prace jako Junior Front-End
-                    Developer.
-                </p>
-                <div>
-                    <p>Jestem osobą: </p>
-                    <ul>
-                        <li>zorganizowaną</li>
-                        <li>kreatywną</li>
-                        <li>ambitną</li>
-                        <li>wytrwałą</li>
-                        <li>komunikatywną</li>
-                    </ul>
-                </div>
+            <hr class="horizontal">
+            <section class="about-me">
+                <h1>Krótko o sobie</h1>
+                <article>
+                    <div class="image"><img src="images/ns.jpg"> </div>
+                    <div class="about-me-txt">
+                        <p> Nazywam się Natalia Sośnierz i pragnę na co dzień zajmować się programowaniem
+                            stron internetowych.
+                            Jestem absolwentką studiów I i II stopnia kierunku Fizyka medyczna na Wydziale
+                            Fizyki UAM w
+                            Poznaniu.<br> Jestem osobą, która od zawsze uwielbia przedmioty ścisłe,
+                            rozwiązywanie zagadek oraz
+                            poszukiwanie niecodziennych rozwiązań. Programowanie zaszczepił we mnie znajomy
+                            4 lata temu, wówczas
+                            było to zajęcie typowo hobbistyczne, jednak pół roku temu postanowiłam rozwijać
+                            się w tej
+                            dziedzinie.<br> W chwili obecnej większość mojej uwagi koncentruję na poznawaniu
+                            nowych technologii
+                            w
+                            tym JavaScript, jQuery, React, które pozwolą mi na prace jako Junior Front-End
+                            Developer. </p>
+
+                        <p>Jestem osobą: </p>
+                        <ul>
+                            <li>zorganizowaną</li>
+                            <li>kreatywną</li>
+                            <li>ambitną</li>
+                            <li>wytrwałą</li>
+                            <li>komunikatywną</li>
+                        </ul>
+                    </div>
+                </article>
             </section>
-            <section>
+            <hr class="horizontal">
+            <section class="projects">
                 <h1>Projekty</h1>
+                <article class="projects-contains">
+                    <div class="project">
+                        <div class="web">
+                            <a href="https://github.com/sosnierz/halloween-master"><img src="images/halloween.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="about">
+                            <h2>Halloween</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo
+                                doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui
+                                velit corrupti consequatur nihil est.</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="web">
+                            <a href="https://github.com/sosnierz/shopJS"><img src="images/shop.png" alt=""></a>
+                        </div>
+                        <div class="about">
+                            <h2>Sklep internetowy</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo
+                                doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui
+                                velit corrupti consequatur nihil est.</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="web">
+                            <a href="https://github.com/sosnierz/CV"><img src="images/halloween.png" alt=""></a>
+                        </div>
+
+                        <div class="about">
+                            <h2>O mnie</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo
+                                doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui
+                                velit
+                                corrupti consequatur nihil est.</p>
+                        </div>
+                    </div>
+
+                </article>
             </section>
-            <section>
+            <hr class="horizontal">
+            <section class="skills">
+                <h1>Umiejętności techniczne</h1>
+                <ul>
+                    <li><img src="images/html-5.png"> </li>
+                    <li><img src="images/css.png"> </li>
+                    <li><img src="images/sass.png"></li>
+                    <li><img src="images/js.png"> </li>
+                    <li><img src="images/jquery.png"> </li>
+                    <li><img src="images/bootstrap.png"> </li>
+                    <li><img src="images/github.png"></li>
+                </ul>
+            </section>
+            <hr class="horizontal">
+            <section class="experience">
                 <h1>Doświadczenie zawodowe</h1>
                 <article>
                     <h2>Manager ds. zamówień publicznych</h2>
                     <h3>Grupa Medikol (Medikol Systems Sp. z o.o., Medikol Solution Sp. z o.o.)
                         11.03.2019 - 31.12.2021</h3>
                     <ul>
-                        <li>kierowanie działaniami związanymi z kompleksowym przygotowaniem i prowadzeniem ofert w
-                            postępowaniach udzielenie zamówień publicznych w zakresie zgodności z przepisami prawa
+                        <li>kierowanie działaniami związanymi z kompleksowym przygotowaniem i
+                            prowadzeniem ofert w
+                            postępowaniach udzielenie zamówień publicznych w zakresie zgodności z
+                            przepisami prawa zamówień publicznych, planem zamówień publicznych,
+                            obowiązującymi przepisami wewnętrznymi oraz wytycznymi w zakresie
+                            udzielania zamówień,</li>
+                        <li> analiza działań konkurencji,</li>
+                        <li>zapewnienie wsparcia sprzedaży, tj. wsparciemerytoryczne, opracowanie
+                            istotnych
+                            materiałów i
+                            szkoleń
+                            opracowywanie i prowadzenie polityki cenowej dlapogwarancyjnego serwisu
+                            aparatury
+                            medycznej,
+
                             zamówień publicznych, planem zamówień publicznych, obowiązującymi przepisami
                             wewnętrznymi
                             oraz wytycznymi w zakresie udzielania zamówień,</li>
                         <li> analiza działań konkurencji,</li>
-                        <li>zapewnienie wsparcia sprzedaży, tj. wsparciemerytoryczne, opracowanie istotnych
-                            materiałów i
+                        <li>zapewnienie wsparcia sprzedaży, tj. wsparciemerytoryczne, opracowanie
+                            istotnych materiałów i
                             szkoleń
-                            opracowywanie i prowadzenie polityki cenowej dlapogwarancyjnego serwisu aparatury
-                            medycznej,
+                            opracowywanie i prowadzenie polityki cenowej dlapogwarancyjnego serwisu
+                            aparatury medycznej,
+
                         </li>
-                        <li>przygotowywanie dokumentacji do składania odwołań do Krajowej Izby Odwoławczej oraz
+                        <li>przygotowywanie dokumentacji do składania odwołań do Krajowej Izby
+                            Odwoławczej oraz
                             współpraca z Radcami Prawnymi w zakresie zamówień publicznych,</li>
                         <li>prowadzenie sprawozdań oraz statystyk z postępowańprzetargowych,</li>
-                        <li>tworzenie analiz finansowych rynku pogwarancyjnejobsługi serwisowej aparatury medycznej,
+                        <li>tworzenie analiz finansowych rynku pogwarancyjnejobsługi serwisowej
+                            aparatury medycznej,
                         </li>
                         <li> stała współpraca z dyrektorami sprzedaży.</li>
                     </ul>
@@ -100,7 +176,8 @@
                         <li>przygotowywanie ofert przetargowych w zakresieformalno-merytorycznym,</li>
                         <li>monitorowanie przebiegu postępowań przetargowych,</li>
                         <li>przygotowywanie ofert handlowych,</li>
-                        <li>prowadzenie korespondencji z Urzędem Rejestracji Wyrobów Medycznych (URWM) oraz
+                        <li>prowadzenie korespondencji z Urzędem Rejestracji Wyrobów Medycznych (URWM)
+                            oraz
                             monitorowaniezaawansowania prowadzonych spraw.</li>
                     </ul>
                 </article>
@@ -109,11 +186,13 @@
                     <h3>Meditech Sp. z o.o.
                         06.2015 – 10.2016</h3>
                     <ul>
-                        <li>bieżący kontakt z klientem w sprawach handlowych dotyczących testów specjalistycznych
+                        <li>bieżący kontakt z klientem w sprawach handlowych dotyczących testów
+                            specjalistycznych
                             aparatury
                             medycznej</li>
                         <li>wystawienie bieżących faktur za usługę</li>
-                        <li>wykonywanie testów specjalistycznych i podstawowych aparatów RTG oraz tomografów
+                        <li>wykonywanie testów specjalistycznych i podstawowych aparatów RTG oraz
+                            tomografów
                             komputerowych a
                             następnie sprawozdań z pomiarów</li>
                         <li>prowadzenie grafiku wyjazdów działu laboratoryjnego</li>
@@ -122,40 +201,27 @@
                     </ul>
                 </article>
             </section>
-
+            <hr class="horizontal">
             <section>
-                <h1>Umiejętności techniczne</h1>
-                <ul>
-                    <li><img src="images/html-5.png"> </li>
-                    <li><img src="images/css.png"> </li>
-                    <li><img src="images/sass.png"></li>
-                    <li><img src="images/js.png"> </li>
-                    <li><img src="images/jquery.png"> </li>
-                    <li><img src="images/bootstrap.png"> </li>
-                    <li><img src="images/github.png"></li>
+                <h1>Jeśli zainteresowała Cię moja osoba zapraszam do kontaktu:</h1>
+                <img src="images/pexels-anthony-beck-4254994.jpg" alt="" srcset="Photo by Anthony Beck from Pexel">
+                <ul class="contacts-list">
+                    <li class="contacts-item">
+                        Telefon:
+                        <a href="tel:+48 533 825 308" class="contacts-link">+48 533 825
+                            308</a>
+                    </li>
+                    <li class="contacts-item">
+                        E-mail:
+                        <a href="mailto:sosnierz.natalia@gmail.com" class="contacts-link">sosnierz.natalia@gmail.com</a>
+                    </li>
+
+                    <h2>Znajdziesz mnie też na:</h2>
+                    <a href=""><img src="images/linkedin-logo.png" alt=""></a>
+                    <a href=""><img src="images/github-small.png" alt=""></a>
                 </ul>
-                <section>
-
-                    <section>
-                        <h1>Jeśli zainteresowała Cię moja osoba zapraszam do kontaktu:</h1>
-                        <img src="images/pexels-anthony-beck-4254994.jpg" alt=""
-                            srcset="Photo by Anthony Beck from Pexel">
-                        <ul class="contacts-list">
-                            <li class="contacts-item">
-                                Telefon:
-                                <a href="tel:+48 533 825 308" class="contacts-link">+48 533 825 308</a>
-                            </li>
-                            <li class="contacts-item">
-                                E-mail:
-                                <a href="mailto:sosnierz.natalia@gmail.com"
-                                    class="contacts-link">sosnierz.natalia@gmail.com</a>
-                            </li>
-
-                            <h2>Znajdziesz mnie też na:</h2>
-                            <a href=""><img src="images/linkedin-logo.png" alt=""></a>
-                            <a href=""><img src="images/github-small.png" alt=""></a>
-                        </ul>
-                    </section>
+            </section>
+            <hr class="horizontal">
         </main>
         <footer>
             <p>&copy; 2021 </p>

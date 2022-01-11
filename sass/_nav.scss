@@ -1,17 +1,53 @@
-nav {
+nav.nav-menu {
     grid-area: navigation;
-    background-color: $white;
+    background-color: $teal;
+    // opacity: 0.4;
+    margin-right: 10px;
+    position: relative;
 
 
     div {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        position: fixed;
 
-        ul.nav-menu {
-            position: fixed;
+        i.fa-bars,
+        ul {
+            position: absolute;
+        }
+
+        i.fa-bars {
+            font-size: $max-font*1.5;
+            color: $white;
+
+            top: 20px;
+            left: 10px;
+
+        }
+
+
+
+        ul {
+
+
             top: 100px;
             left: 0;
+            font-size: $max-font;
+            padding-left: 20px;
+            list-style-type: none;
+
+
+            li {
+                max-width: 300px;
+                margin-top: 30px;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    opacity: 1;
+
+
+                }
+
+            }
         }
     }
 

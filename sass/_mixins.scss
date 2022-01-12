@@ -39,3 +39,7 @@
     font-weight: 800;
     text-align: center;
 }
+
+@mixin hidden {
+    display: none;
+}

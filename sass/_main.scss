@@ -71,9 +71,6 @@ main {
                 background: $gradient;
                 padding: 10px;
 
-
-
-
                 div {
                     flex-basis: 50%;
                 }
@@ -88,7 +85,6 @@ main {
                     padding: 10px 20px 20px 0;
                     text-align: left;
 
-
                     h2 {
                         font-size: 18px;
                         border-bottom: 2px solid $white;
@@ -102,12 +98,7 @@ main {
                         padding-left: 20px;
                     }
                 }
-
-
-
-
             }
-
         }
     }
 
@@ -130,10 +121,36 @@ main {
         }
     }
 
-    section.experience {
-        h3 {
-            font-size: 10px;
+    section.experiences {
+
+
+        div {
+            @include flex;
+            min-height: 350px;
+
+            article.experience {
+                flex-basis: 30%;
+                @include flex;
+                flex-direction: column;
+                border: 5px inset $teal;
+                border-radius: 10px;
+                margin-bottom: 60px;
+
+                h2,
+                h3 {
+                    text-align: center;
+                    padding: 0 10px;
+                }
+
+                h3 {
+                    vertical-align: middle;
+                }
+
+                ul {
+                    @include hidden;
+                }
+            }
+
         }
     }
-
 }

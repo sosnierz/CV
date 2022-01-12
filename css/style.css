@@ -261,8 +261,48 @@ main section.skills ul li {
   margin-top: 30px;
 }
 
-main section.experience h3 {
-  font-size: 10px;
+main section.experiences div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  min-height: 350px;
+}
+
+main section.experiences div article.experience {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 5px inset #1eb79c;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+main section.experiences div article.experience h2,
+main section.experiences div article.experience h3 {
+  text-align: center;
+  padding: 0 10px;
+}
+
+main section.experiences div article.experience h3 {
+  vertical-align: middle;
+}
+
+main section.experiences div article.experience ul {
+  display: none;
 }
 
 footer {

@@ -153,4 +153,75 @@ main {
 
         }
     }
+
+    section.contact {
+        background-color: black;
+        padding: 30px 20px;
+
+        h1 {
+            color: $white;
+        }
+
+        div.wrap {
+            @include flex;
+            align-items: stretch;
+            padding-top: 20px;
+            margin: 0 auto;
+
+            form {
+                margin-top: 10px;
+
+                input,
+                button,
+                textarea {
+                    width: 95%;
+                    margin-bottom: 18px;
+                    font-size: 12px;
+                    padding: 5px;
+                }
+
+                input {
+                    height: 36px;
+
+                }
+
+                textarea {
+                    height: 120px
+                }
+
+                button {
+                    font-size: 14px;
+                    line-height: 40px;
+                    background-color: black;
+                    color: white;
+                    border: 2px solid white;
+                }
+            }
+
+            .socials {
+                flex-basis: 48%;
+                font-size: 0;
+
+
+                .social {
+                    padding: 10px 0;
+                    @include flex;
+                    align-content: start;
+
+
+                    a {
+                        flex-basis: 70%;
+                        color: white;
+                        text-decoration: none;
+                        line-height: 72px;
+                        padding-left: 30px;
+                        font-size: 15px;
+
+                    }
+
+
+                }
+            }
+        }
+    }
 }

@@ -43,3 +43,12 @@
 @mixin hidden {
     display: none;
 }
+
+// clearfix to float
+@mixin clearfix() {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}

@@ -305,11 +305,98 @@ main section.experiences div article.experience ul {
   display: none;
 }
 
+main section.contact {
+  background-color: black;
+  padding: 30px 20px;
+}
+
+main section.contact h1 {
+  color: white;
+}
+
+main section.contact div.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+main section.contact div.wrap form {
+  margin-top: 10px;
+}
+
+main section.contact div.wrap form input,
+main section.contact div.wrap form button,
+main section.contact div.wrap form textarea {
+  width: 95%;
+  margin-bottom: 18px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+main section.contact div.wrap form input {
+  height: 36px;
+}
+
+main section.contact div.wrap form textarea {
+  height: 120px;
+}
+
+main section.contact div.wrap form button {
+  font-size: 14px;
+  line-height: 40px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+main section.contact div.wrap .socials {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  font-size: 0;
+}
+
+main section.contact div.wrap .socials .social {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: start;
+}
+
+main section.contact div.wrap .socials .social a {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  color: white;
+  text-decoration: none;
+  line-height: 72px;
+  padding-left: 30px;
+  font-size: 15px;
+}
+
 footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: footer;
+}
+
+footer div p {
+  text-align: center;
+  color: black;
 }
 
 body {

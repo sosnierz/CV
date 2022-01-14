@@ -1,5 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,100;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:ital,wght@0,400;1,100;1,800&display=swap");
+@-webkit-keyframes jump {
+  0% {
+    -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    -webkit-box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+@keyframes jump {
+  0% {
+    -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    -webkit-box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+
 nav.navUp {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -32,19 +73,25 @@ header {
 header button {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 42%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 252px;
   height: 252px;
   background-color: white;
-  color: #091d22;
+  color: #5b4288;
   border: none;
   border-radius: 50%;
   font-size: 18.66667px;
   cursor: pointer;
-  -webkit-box-shadow: rgba(49, 138, 165, 0.25) 0px 30px 60px -12px inset, rgba(1, 30, 39, 0.3) 0px 18px 36px -18px inset;
-          box-shadow: rgba(49, 138, 165, 0.25) 0px 30px 60px -12px inset, rgba(1, 30, 39, 0.3) 0px 18px 36px -18px inset;
+  -webkit-animation-name: jump;
+          animation-name: jump;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 header button img {
@@ -104,6 +151,11 @@ nav.nav-menu div ul li a {
   text-decoration: none;
   color: white;
   opacity: 1;
+}
+
+nav.nav-menu div ul li a.activeNav {
+  color: #5b4288;
+  border-bottom: 1px solid #5b4288;
 }
 
 main {

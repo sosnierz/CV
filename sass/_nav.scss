@@ -17,17 +17,12 @@ nav.nav-menu {
         i.fa-bars {
             font-size: $max-font*1.5;
             color: $white;
-
             top: 20px;
             left: 10px;
 
         }
 
-
-
         ul {
-
-
             top: 100px;
             left: 0;
             font-size: $max-font;
@@ -43,13 +38,15 @@ nav.nav-menu {
                     text-decoration: none;
                     color: $white;
                     opacity: 1;
-
-
                 }
 
+                a.activeNav {
+                    color: $black;
+                    border-bottom: 1px solid $black;
+                }
             }
+
+
         }
     }
-
-
 }

@@ -20,24 +20,28 @@
         </nav>
         <header>
             <button>Moje projekty<br><img src="images/portfolio.png"></button>
-            <i class="fas fa-chevron-down"></i>
+            <a href="#about-me"><i class="fas fa-chevron-down"></i></a>
         </header>
         <nav class="nav-menu">
             <div>
                 <i class="fas fa-bars"></i>
                 <ul>
-                    <li><a href="#">O mnie</a></li>
-                    <li><a href="#">Projekty <br> Umiejętności</a></li>
-                    <li><a href="#">Doświadczenie zawodowe</a></li>
+                    <li><a class='nav0' href="#">Start</a></li>
+                    <li><a class='nav1' href="#">O mnie</a></li>
+                    <li><a class='nav2' href="#">Projekty </a></li>
+                    <li><a class='nav3' href="#"> Umiejętności</a></li>
+                    <li><a class='nav4' href="#">Doświadczenie zawodowe</a></li>
 
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a class='nav5' href="#">Kontakt</a></li>
                 </ul>
             </div>
         </nav>
         <main>
             <hr class="horizontal">
             <section class="about-me">
-                <h1>Krótko o sobie</h1>
+                <a name="about-me">
+                    <h1>Krótko o sobie</h1>
+                </a>
                 <article>
                     <div class="image"><img src="images/ns.jpg"> </div>
                     <div class="about-me-txt">
@@ -236,11 +240,14 @@
             <div>
                 <p>&copy; 2021 </p>
 
-                
+
             </div>
 
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="JS/js.js"></script>
 </body>
 
 </html>

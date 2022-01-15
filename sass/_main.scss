@@ -28,7 +28,7 @@ main {
             div.image img {
                 display: block;
                 width: 50%;
-                height: 55%;
+                max-height: 40%;
                 border-radius: 50%;
                 margin: 20% auto;
 
@@ -58,18 +58,21 @@ main {
 
 
         .projects-contains {
-            @include flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            margin: 60px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+
+
 
 
             div.project {
                 display: flex;
                 height: 250px;
-                margin-top: 30px;
                 background: $gradient;
                 padding: 10px;
+                transition: 0.5s;
+
+
 
                 div {
                     flex-basis: 50%;
@@ -99,24 +102,42 @@ main {
                     }
                 }
             }
+
+            div.project:nth-of-type(odd) {
+                grid-column: 1 / -2;
+                transform: translateX(-100vw);
+            }
+
+            div.project:nth-of-type(even) {
+                grid-column: 2 / -1;
+                transform: translateX(100vw);
+            }
+
+            div.project.active:nth-of-type(odd),
+            div.project.active:nth-of-type(even) {
+                transform: translateX(0);
+            }
         }
     }
 
     section.skills {
-        min-height: 49vh;
+        min-height: 80vh;
 
         ul {
             @include flex;
             align-content: stretch;
             flex-wrap: wrap;
-            margin-top: 40px;
+
+            margin-top: 90px;
 
 
             li {
                 display: inline-block;
                 flex-basis: 33%;
                 text-align: center;
-                margin-top: 30px;
+                margin-top: 50px;
+                visibility: hidden;
+
             }
         }
     }
@@ -135,6 +156,8 @@ main {
                 border: 5px inset $teal;
                 border-radius: 10px;
                 margin-bottom: 60px;
+                transform: scale(0);
+                transition: 0.5s;
 
                 h2,
                 h3 {

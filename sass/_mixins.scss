@@ -40,9 +40,7 @@
     text-align: center;
 }
 
-@mixin hidden {
-    display: none;
-}
+
 
 @mixin activeProj {
     transform: translateX(0);
@@ -75,6 +73,15 @@
     animation-duration: 4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+// box experience
+@mixin expBox($width, $bRadius, $bgColor, $margin) {
+    width: $width;
+    border-radius: $bRadius;
+    background-color: $bgColor;
+    margin: $margin;
+    transition: .3s all ease-in-out;
 }
 
 // border nav avtive

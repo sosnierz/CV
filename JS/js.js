@@ -75,7 +75,7 @@ if (scrollValue > topSkills + skillsHeight - windowHeight) {
     $liSkills.each(function(i){
         setTimeout(() => { 
             $(this).attr("style", "visibility: visible ")
-        }, i*300);
+        }, i*150);
        
     })
 }
@@ -105,6 +105,16 @@ $('.nav-menu a').on('click', function () {
     })
 })
 
+// ul experiencews show up
 
+$('article.experience').click(function() {
+    $(this).toggleClass('grow');
+    $(this).toggleClass('shrink');
+     $(this).children('div').toggleClass('modal-wrap');
+     $(this).children('div').toggleClass('modal-active');
+
+     })
 
     
+
+

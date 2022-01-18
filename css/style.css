@@ -192,7 +192,7 @@ main article {
 }
 
 main section.about-me {
-  min-height: 95vh;
+  height: 80vh;
 }
 
 main section.about-me article {
@@ -312,7 +312,7 @@ main section.skills ul {
       align-content: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 90px;
+  margin-top: 0px;
 }
 
 main section.skills ul li {
@@ -320,8 +320,13 @@ main section.skills ul li {
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 80px;
   visibility: hidden;
+}
+
+main section.skills ul li img {
+  width: 200px;
+  height: 200px;
 }
 
 main section.experiences div {
@@ -332,23 +337,34 @@ main section.experiences div {
       justify-content: space-around;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  min-height: 350px;
+}
+
+main section.experiences div article.shrink {
+  height: 250px;
 }
 
 main section.experiences div article.experience {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  width: 400px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 15px;
   border: 5px inset #1eb79c;
   border-radius: 10px;
   margin-bottom: 60px;
@@ -356,6 +372,7 @@ main section.experiences div article.experience {
           transform: scale(0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 main section.experiences div article.experience h2,
@@ -368,8 +385,46 @@ main section.experiences div article.experience h3 {
   vertical-align: middle;
 }
 
-main section.experiences div article.experience ul {
+main section.experiences div article.experience div.modal-wrap {
   display: none;
+}
+
+main section.experiences div article.experience:hover {
+  background: linear-gradient(130deg, #113c49 0%, #1eb79c 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main section.experiences div article.experience:hover h2,
+main section.experiences div article.experience:hover h3 {
+  color: white;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+}
+
+main section.experiences div .grow {
+  min-height: 300px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-align: stretch;
+}
+
+main section.experiences div .grow div.modal-active {
+  display: block;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+main section.experiences div .grow div.modal-active ul {
+  margin-top: 20px;
+}
+
+main section.experiences div .grow div.modal-active ul li {
+  color: white;
+  margin-top: 10px;
+  text-align: justify;
 }
 
 main section.contact {
@@ -425,6 +480,11 @@ main section.contact div.wrap form button {
   border: 2px solid white;
 }
 
+main section.contact div.wrap form button:hover {
+  background-color: white;
+  color: #1eb79c;
+}
+
 main section.contact div.wrap .socials {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -444,6 +504,15 @@ main section.contact div.wrap .socials .social {
       align-content: start;
 }
 
+main section.contact div.wrap .socials .social:hover {
+  border-bottom: 2px solid white;
+}
+
+main section.contact div.wrap .socials .social:hover a {
+  color: #1eb79c;
+  letter-spacing: 4px;
+}
+
 main section.contact div.wrap .socials .social a {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
@@ -452,6 +521,7 @@ main section.contact div.wrap .socials .social a {
   line-height: 72px;
   padding-left: 30px;
   font-size: 15px;
+  letter-spacing: 2px;
 }
 
 footer {

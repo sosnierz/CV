@@ -408,6 +408,14 @@ main section.experiences div .grow {
       -ms-flex-align: stretch;
           align-items: stretch;
   text-align: stretch;
+  background: linear-gradient(130deg, #113c49 0%, #1eb79c 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main section.experiences div .grow h2,
+main section.experiences div .grow h3 {
+  color: white;
 }
 
 main section.experiences div .grow div.modal-active {

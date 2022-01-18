@@ -206,7 +206,13 @@ main {
                 min-height: 300px;
                 align-items: stretch;
                 text-align: stretch;
+                background: linear-gradient(130deg, $color-main 0%, $teal 100%);
+                box-shadow: none;
 
+                h2,
+                h3 {
+                    color: white;
+                }
 
                 div.modal-active {
                     display: block;

@@ -5,11 +5,13 @@ nav.navUp {
 
     img {
         height: $max-font;
+        display: inline-block;
         width: $max-font;
         position: absolute;
         top: 50%;
         right: 30px;
         transform: translateY(-50%);
+        cursor: pointer;
 
     }
 }

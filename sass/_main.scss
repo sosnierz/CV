@@ -15,11 +15,9 @@ main {
     }
 
     section.about-me {
-        height: 80vh;
+        min-height: 80vh;
 
         article {
-            min-height: 90vh;
-
 
             div {
                 width: 50%;
@@ -30,7 +28,7 @@ main {
                 width: 50%;
                 max-height: 40%;
                 border-radius: 50%;
-                margin: 20% auto;
+                margin: 12% auto;
 
             }
 

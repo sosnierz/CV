@@ -107,14 +107,28 @@ $('.nav-menu a').on('click', function () {
 
 // ul experiencews show up
 
-$('article.experience').click(function() {
+$('article.experience').mouseenter(function() {
     $(this).toggleClass('grow');
     $(this).toggleClass('shrink');
      $(this).children('div').toggleClass('modal-wrap');
      $(this).children('div').toggleClass('modal-active');
-
+     })
+$('article.experience').mouseleave(function() {
+    $(this).toggleClass('grow');
+    $(this).toggleClass('shrink');
+     $(this).children('div').toggleClass('modal-wrap');
+     $(this).children('div').toggleClass('modal-active');
      })
 
     
+// change language
 
+$('div.pl img.uk').click(function(){
+    $('div.pl').css("display", "none");
+    $('div.en').css("display", "initial")
+});
+$('div.en img.pol').click(function(){
+    $('div.pl').css("display", "initial");
+    $('div.en').css("display", "none")
+})
 

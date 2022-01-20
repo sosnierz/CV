@@ -549,12 +549,7 @@ body {
           box-sizing: border-box;
 }
 
-body div.pl {
-  display: none;
-}
-
-body div.pl,
-body div.en {
+body div.container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 300px 1fr;

@@ -123,12 +123,22 @@ $('article.experience').mouseleave(function() {
     
 // change language
 
-$('div.pl img.uk').click(function(){
-    $('div.pl').css("display", "none");
-    $('div.en').css("display", "initial")
-});
-$('div.en img.pol').click(function(){
-    $('div.pl').css("display", "initial");
-    $('div.en').css("display", "none")
-})
 
+
+$('.uk').hide();
+$('.navUp img.pl').hide();
+$('.navUp img.uk').show();
+
+$('.navUp img.uk').on('click', function () {
+    $('.uk').show();
+    $('.pl').hide();
+    $('.navUp img.uk').hide();
+    $('.navUp img.pl').show();
+
+})
+$('.navUp img.pl').on('click', function () {
+    $('.pl').show();
+    $('.uk').hide();
+    $('.navUp img.pl').hide();
+    $('.navUp img.uk').show();
+})

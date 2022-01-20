@@ -11,12 +11,10 @@ body {
     padding: 0;
     box-sizing: border-box;
 
-    div.pl {
-        display: none;
-    }
 
-    div.pl,
-    div.en {
+
+
+    div.container {
         @include grid-template;
         font-family: $font-main;
         overflow: hidden;

@@ -1,6 +1,6 @@
 // active nav when web is scroll
 console.log('k');
-const topSection3 = $('section.projects')
+
 
  $(document).on('scroll', function(){
 
@@ -123,8 +123,6 @@ $('article.experience').mouseleave(function() {
     
 // change language
 
-
-
 $('.uk').hide();
 $('.navUp img.pl').hide();
 $('.navUp img.uk').show();
@@ -141,4 +139,9 @@ $('.navUp img.pl').on('click', function () {
     $('.uk').hide();
     $('.navUp img.pl').hide();
     $('.navUp img.uk').show();
+})
+
+// hamburger
+$(".burger").on("click", function () {
+    $(".fas, aside").toggleClass("show");
 })

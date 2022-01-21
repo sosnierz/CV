@@ -56,7 +56,7 @@ nav.navUp img {
   width: 28px;
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 5%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
@@ -124,16 +124,26 @@ nav.nav-menu div {
   position: fixed;
 }
 
-nav.nav-menu div i.fa-bars,
+nav.nav-menu div div.burger,
 nav.nav-menu div ul {
   position: absolute;
 }
 
-nav.nav-menu div i.fa-bars {
+nav.nav-menu div .burger {
   font-size: 42px;
   color: white;
   top: 20px;
   left: 10px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+nav.nav-menu div .burger .fas {
+  display: none;
+}
+
+nav.nav-menu div .burger:hover {
+  cursor: pointer;
 }
 
 nav.nav-menu div ul {
@@ -342,7 +352,7 @@ main section.experiences div article.shrink {
 }
 
 main section.experiences div article.experience {
-  width: 400px;
+  width: 330px;
   border-radius: 10px;
   background-color: white;
   margin: 20px;
@@ -355,16 +365,12 @@ main section.experiences div article.experience {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
   padding: 15px;
   border: 5px inset #1eb79c;
-  border-radius: 10px;
   margin-bottom: 60px;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -557,7 +563,7 @@ body div.container {
   -ms-grid-rows: 35px auto 1fr 60px;
       grid-template-rows: 35px auto 1fr 60px;
       grid-template-areas: "lang lang" "navigation baner" "navigation page" "footer footer";
-  max-width: 1800px;
+  max-width: 1700px;
   min-height: 100vh;
   margin: 0 auto;
   font-family: "Raleway", sans-serif;

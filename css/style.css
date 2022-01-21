@@ -234,7 +234,8 @@ main article {
 }
 
 main section.about-me {
-  min-height: 80vh;
+  min-height: 70vh;
+  max-height: 90vh;
 }
 
 main section.about-me article div {
@@ -244,20 +245,20 @@ main section.about-me article div {
 main section.about-me article div.image img {
   display: block;
   width: 50%;
-  max-height: 40%;
+  max-height: 50%;
   border-radius: 50%;
   margin: 12% auto;
 }
 
 main section.about-me article div.about-me-txt {
-  padding: 50px;
+  padding: 10px auto;
   text-align: justify;
 }
 
 main section.about-me article div.about-me-txt p,
 main section.about-me article div.about-me-txt ul {
   letter-spacing: 1px;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 main section.about-me article div.about-me-txt p:first-of-type::first-letter,
@@ -334,6 +335,19 @@ main section.projects .projects-contains div.project.active:nth-of-type(even) {
           transform: translateX(0);
 }
 
+@media (max-width: 980px) {
+  main section.projects .projects-contains {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-gap: 30px;
+  }
+  main section.projects div.project.active:nth-of-type(odd),
+  main section.projects div.project.active:nth-of-type(even) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
 main section.skills {
   min-height: 80vh;
 }
@@ -363,8 +377,8 @@ main section.skills ul li {
 }
 
 main section.skills ul li img {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
 }
 
 main section.experiences div {
@@ -385,7 +399,7 @@ main section.experiences div article.experience {
   max-width: 330px;
   border-radius: 10px;
   background-color: white;
-  margin: 20px;
+  margin: 1%;
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
   display: -webkit-box;
@@ -461,12 +475,31 @@ main section.experiences div .grow div.modal-active {
 
 main section.experiences div .grow div.modal-active ul {
   margin-top: 20px;
+  padding: 20px;
 }
 
 main section.experiences div .grow div.modal-active ul li {
   color: white;
   margin-top: 10px;
   text-align: justify;
+}
+
+@media (max-width: 980px) {
+  main section.experiences div,
+  main article.experience {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main section.experiences div article.experience,
+  main article.experience article.experience {
+    max-width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 main section.contact {
@@ -590,8 +623,8 @@ body div.container {
   display: grid;
   -ms-grid-columns: 300px 1fr;
       grid-template-columns: 300px 1fr;
-  -ms-grid-rows: 35px 1000px 1fr 60px;
-      grid-template-rows: 35px 1000px 1fr 60px;
+  -ms-grid-rows: 35px auto 1fr 60px;
+      grid-template-rows: 35px auto 1fr 60px;
       grid-template-areas: "lang lang" "navigation baner" "navigation page" "footer footer";
   max-width: 1700px;
   min-height: 100vh;

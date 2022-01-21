@@ -1,7 +1,7 @@
 @mixin grid-template {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 35px 1000px 1fr 60px;
+    grid-template-rows: 35px auto 1fr 60px;
     grid-template-areas: "lang lang""navigation baner""navigation page""footer footer";
     max-width: $width-max-template;
     min-height: 100vh;

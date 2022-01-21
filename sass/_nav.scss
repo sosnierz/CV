@@ -1,7 +1,6 @@
 nav.nav-menu {
     grid-area: navigation;
     background-color: $teal;
-    // opacity: 0.4;
     margin-right: 10px;
     position: relative;
 
@@ -9,32 +8,15 @@ nav.nav-menu {
     div {
         position: fixed;
 
-        div.burger,
+
         ul {
             position: absolute;
-        }
-
-        .burger {
-            font-size: $max-font*1.5;
-            color: $white;
-            top: 20px;
-            left: 10px;
-            transition: .3s linear;
-
-            .fas {
-
-                display: none;
-            }
-        }
-        .burger:hover {
-            cursor: pointer;
-        }
-        ul {
             top: 100px;
             left: 0;
             font-size: $max-font;
             padding-left: 20px;
             list-style-type: none;
+
             li {
                 max-width: 300px;
                 margin-top: 30px;
@@ -53,4 +35,35 @@ nav.nav-menu {
 
         }
     }
+}
+
+
+@media(max-width: 1100px) {
+
+    nav.nav-menu {
+        position: absolute;
+        top: 35px;
+        left: -310px;
+        width: 300px;
+        height: 95vh;
+        transition: .3s linear;
+        z-index: 1;
+
+        div {
+            position: relative;
+
+            ul {
+                font-size: $medium-font;
+            }
+
+        }
+    }
+
+    nav.nav-menu.showNav {
+        left: 0;
+        opacity: 0.5;
+
+
+    }
+
 }

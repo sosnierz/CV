@@ -142,6 +142,7 @@ $('.navUp img.pl').on('click', function () {
 })
 
 // hamburger
-$(".burger").on("click", function () {
-    $(".fas, aside").toggleClass("show");
+const burger =$("div.burger i.fas")
+$("div.burger").on("click", function () {
+    $("div.burger i.fas,nav.nav-menu").toggleClass("showNav");
 })

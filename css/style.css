@@ -50,6 +50,25 @@ nav.navUp {
   background-color: white;
 }
 
+nav.navUp div.burger {
+  position: absolute;
+  font-size: 28px;
+  line-height: 35px;
+  color: #5b4288;
+  top: 0px;
+  left: 10px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+nav.navUp div.burger i.fas {
+  display: none;
+}
+
+nav.navUp .burger:hover {
+  cursor: pointer;
+}
+
 nav.navUp img {
   height: 28px;
   display: inline-block;
@@ -60,6 +79,15 @@ nav.navUp img {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  nav.navUp div.burger i.fas.showNav {
+    display: block;
+  }
+  nav.navUp div.burger i.fas {
+    display: none;
+  }
 }
 
 header {
@@ -124,29 +152,8 @@ nav.nav-menu div {
   position: fixed;
 }
 
-nav.nav-menu div div.burger,
 nav.nav-menu div ul {
   position: absolute;
-}
-
-nav.nav-menu div .burger {
-  font-size: 42px;
-  color: white;
-  top: 20px;
-  left: 10px;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
-}
-
-nav.nav-menu div .burger .fas {
-  display: none;
-}
-
-nav.nav-menu div .burger:hover {
-  cursor: pointer;
-}
-
-nav.nav-menu div ul {
   top: 100px;
   left: 0;
   font-size: 28px;
@@ -168,6 +175,29 @@ nav.nav-menu div ul li a {
 nav.nav-menu div ul li a.activeNav {
   color: #5b4288;
   border-bottom: 1px solid #5b4288;
+}
+
+@media (max-width: 1100px) {
+  nav.nav-menu {
+    position: absolute;
+    top: 35px;
+    left: -310px;
+    width: 300px;
+    height: 95vh;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+    z-index: 1;
+  }
+  nav.nav-menu div {
+    position: relative;
+  }
+  nav.nav-menu div ul {
+    font-size: 20px;
+  }
+  nav.nav-menu.showNav {
+    left: 0;
+    opacity: 0.5;
+  }
 }
 
 main {
@@ -208,7 +238,7 @@ main section.about-me {
 }
 
 main section.about-me article div {
-  width: 50%;
+  max-width: 50%;
 }
 
 main section.about-me article div.image img {
@@ -250,7 +280,7 @@ main section.projects .projects-contains div.project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 250px;
+  min-height: 250px;
   background: linear-gradient(135deg, #1abc9c 0%, #8e44ad 100%);
   padding: 10px;
   -webkit-transition: 0.5s;
@@ -263,8 +293,8 @@ main section.projects .projects-contains div.project div {
 }
 
 main section.projects .projects-contains div.project img {
-  min-width: 90%;
-  max-height: 95%;
+  max-width: 80%;
+  min-height: 90%;
 }
 
 main section.projects .projects-contains div.project .about {
@@ -352,7 +382,7 @@ main section.experiences div article.shrink {
 }
 
 main section.experiences div article.experience {
-  width: 330px;
+  max-width: 330px;
   border-radius: 10px;
   background-color: white;
   margin: 20px;
@@ -560,13 +590,20 @@ body div.container {
   display: grid;
   -ms-grid-columns: 300px 1fr;
       grid-template-columns: 300px 1fr;
-  -ms-grid-rows: 35px auto 1fr 60px;
-      grid-template-rows: 35px auto 1fr 60px;
+  -ms-grid-rows: 35px 1000px 1fr 60px;
+      grid-template-rows: 35px 1000px 1fr 60px;
       grid-template-areas: "lang lang" "navigation baner" "navigation page" "footer footer";
   max-width: 1700px;
   min-height: 100vh;
   margin: 0 auto;
   font-family: "Raleway", sans-serif;
   overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  body div.container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

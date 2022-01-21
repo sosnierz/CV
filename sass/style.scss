@@ -24,3 +24,9 @@ body {
 
 
 }
+
+@media(max-width:1100px) {
+    body div.container {
+        grid-template-columns: 1fr;
+    }
+}

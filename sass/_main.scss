@@ -20,7 +20,7 @@ main {
         article {
 
             div {
-                width: 50%;
+                max-width: 50%;
             }
 
             div.image img {
@@ -65,7 +65,7 @@ main {
 
             div.project {
                 display: flex;
-                height: 250px;
+                min-height: 250px;
                 background: $gradient;
                 padding: 10px;
                 transition: 0.5s;
@@ -77,8 +77,8 @@ main {
                 }
 
                 img {
-                    min-width: 90%;
-                    max-height: 95%;
+                    max-width: 80%;
+                    min-height: 90%;
                 }
 
                 .about {

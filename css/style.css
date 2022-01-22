@@ -4,40 +4,40 @@
   0% {
     -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
             box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translate(-50%, -50px);
+            transform: translate(-50%, -50px);
   }
   50% {
     -webkit-box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translate(-50%, -20px);
+            transform: translate(-50%, -20px);
   }
   100% {
     -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
             box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translate(-50%, -50px);
+            transform: translate(-50%, -50px);
   }
 }
 @keyframes jump {
   0% {
     -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
             box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translate(-50%, -50px);
+            transform: translate(-50%, -50px);
   }
   50% {
     -webkit-box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translate(-50%, -20px);
+            transform: translate(-50%, -20px);
   }
   100% {
     -webkit-box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
             box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translate(-50%, -50px);
+            transform: translate(-50%, -50px);
   }
 }
 
@@ -48,6 +48,7 @@ nav.navUp {
   grid-area: lang;
   position: relative;
   background-color: white;
+  max-width: 1700px;
 }
 
 nav.navUp div.burger {
@@ -90,6 +91,12 @@ nav.navUp img {
   }
 }
 
+@media (max-width: 300px) {
+  nav.navUp {
+    max-width: 290px;
+  }
+}
+
 header {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -103,9 +110,7 @@ header {
 header button {
   position: absolute;
   top: 50%;
-  left: 40%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 50%;
   width: 252px;
   height: 252px;
   background-color: white;
@@ -122,20 +127,47 @@ header button {
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 header button img {
   margin-top: 20px;
 }
 
-header i {
-  position: absolute;
-  font-size: 112px;
-  bottom: 28px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  color: white;
+@media (max-width: 500px) {
+  header button {
+    width: 140px;
+    height: 140px;
+    font-size: 15px;
+  }
+  header button img {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 300px) and (orientation: landscape) and (max-width: 800px) {
+  header button {
+    top: 25%;
+    width: 140px;
+    height: 140px;
+    font-size: 15px;
+  }
+  header button img {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) and (max-width: 1000px) {
+  header button {
+    top: 25%;
+  }
+}
+
+@media (max-width: 300px) {
+  header {
+    max-width: 290px;
+  }
 }
 
 nav.nav-menu {
@@ -172,7 +204,11 @@ nav.nav-menu div ul li a {
   opacity: 1;
 }
 
-nav.nav-menu div ul li a.activeNav {
+nav.nav-menu div ul li a:hover {
+  color: #5b4288;
+}
+
+nav.nav-menu div ul a.activeNav {
   color: #5b4288;
   border-bottom: 1px solid #5b4288;
 }
@@ -197,6 +233,25 @@ nav.nav-menu div ul li a.activeNav {
   nav.nav-menu.showNav {
     left: 0;
     opacity: 0.5;
+  }
+}
+
+@media (min-width: 300px) and (orientation: landscape) and (max-width: 1000px) {
+  nav.nav-menu.showNav div ul {
+    top: 50px;
+  }
+  nav.nav-menu.showNav div ul li {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 600px) and (orientation: landscape) and (max-height: 300px) {
+  nav.nav-menu.showNav div ul {
+    top: 10px;
+  }
+  nav.nav-menu.showNav div ul li {
+    margin-top: 10px;
+    font-size: 20px;
   }
 }
 
@@ -255,7 +310,7 @@ main section.about-me article div {
 main section.about-me article div.image img {
   display: block;
   width: 50%;
-  max-height: 50%;
+  max-height: 60%;
   border-radius: 50%;
   margin: 12% auto;
 }
@@ -289,6 +344,10 @@ main section.about-me article div.about-me-txt p:last-of-type::first-letter {
   main section.about-me article div.about-me-txt ul li {
     font-size: 15px;
   }
+  main section.about-me article div.about-me-txt p:first-of-type::first-letter,
+  main section.about-me article div.about-me-txt p:last-of-type::first-letter {
+    font-size: 35px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -304,6 +363,21 @@ main section.about-me article div.about-me-txt p:last-of-type::first-letter {
   }
   main section.about-me article div.image img {
     margin-top: 2%;
+  }
+}
+
+@media (max-width: 500px) {
+  main section.about-me article div.image img {
+    max-width: 30%;
+    max-height: 30%;
+  }
+  main section.about-me article div.about-me-txt p,
+  main section.about-me article div.about-me-txt ul {
+    line-height: none;
+  }
+  main section.about-me article div.about-me-txt p:first-of-type::first-letter,
+  main section.about-me article div.about-me-txt p:last-of-type::first-letter {
+    font-size: 25px;
   }
 }
 
@@ -331,9 +405,9 @@ main section.projects .projects-contains div.project div {
       flex-basis: 50%;
 }
 
-main section.projects .projects-contains div.project img {
-  max-width: 80%;
-  min-height: 90%;
+main section.projects .projects-contains div.project div.web img {
+  max-width: 100%;
+  min-height: 100%;
 }
 
 main section.projects .projects-contains div.project .about {
@@ -342,7 +416,16 @@ main section.projects .projects-contains div.project .about {
   text-align: left;
 }
 
-main section.projects .projects-contains div.project .about h2 {
+main section.projects .projects-contains div.project .about a {
+  text-decoration: none;
+  color: white;
+}
+
+main section.projects .projects-contains div.project .about a:hover {
+  color: #5b4288;
+}
+
+main section.projects .projects-contains div.project .about a h2 {
   font-size: 18px;
   border-bottom: 2px solid white;
   margin-bottom: 12px;
@@ -386,6 +469,18 @@ main section.projects .projects-contains div.project.active:nth-of-type(even) {
   }
 }
 
+@media (max-width: 580px) {
+  main section.projects .projects-contains div.project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section.projects .projects-contains div.project div.web img {
+    width: 100%;
+  }
+}
+
 main section.skills {
   min-height: 60vh;
 }
@@ -403,6 +498,7 @@ main section.skills ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 0px;
+  padding: 0;
 }
 
 main section.skills ul li {
@@ -430,6 +526,15 @@ main section.skills ul li img {
   main section.skills ul li {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  main section.skills ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -551,6 +656,7 @@ main section.experiences div .grow div.modal-active ul li {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    margin: 10px 30px;
   }
 }
 
@@ -653,15 +759,76 @@ main section.contact div.wrap .socials .social a {
 }
 
 @media (max-width: 700px) {
-  main section.contact {
-    background-color: black;
-    padding: 30px 20px;
-  }
   main section.contact div.wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  main section.contact div.wrap {
+    padding-top: 10px;
+  }
+  main section.contact div.wrap form input,
+  main section.contact div.wrap form button,
+  main section.contact div.wrap form textarea {
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-size: 10px;
+    padding: 5px;
+  }
+  main section.contact div.wrap form input {
+    height: 30px;
+  }
+  main section.contact div.wrap .socials {
+    padding-left: 0px;
+  }
+  main section.contact div.wrap .socials .social {
+    padding: 8px 0;
+    width: 100%;
+  }
+  main section.contact div.wrap .socials .social img {
+    max-width: 50%;
+    max-height: 50%;
+  }
+  main section.contact div.wrap .socials .social a {
+    padding-left: 10px;
+    font-size: 10px;
+    letter-spacing: none;
+  }
+}
+
+@media (max-width: 300px) {
+  main section.contact div.wrap form input,
+  main section.contact div.wrap form button,
+  main section.contact div.wrap form textarea {
+    max-width: 80%;
+    margin: 10px 20px;
+  }
+  main section.contact div.wrap .socials .social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  main section.contact div.wrap .socials .social img,
+  main section.contact div.wrap .socials .social a {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main section.contact div.wrap .socials .social img {
+    max-width: 40px;
+    max-height: 40px;
   }
 }
 

@@ -9,8 +9,8 @@ header {
     button {
         position: absolute;
         top: 50%;
-        left: 40%;
-        transform: translateX(-50%);
+        left: 50%;
+
         width: $max-font*9;
         height: $max-font*9;
         background-color: $white;
@@ -20,21 +20,63 @@ header {
         font-size: $max-font/1.5;
         cursor: pointer;
         @include animate;
-
+        transform: translateX(-50%);
 
         img {
             margin-top: 20px;
         }
     }
 
-    i {
-        position: absolute;
-        font-size: $max-font*4;
-        bottom: $max-font;
-        left: 50%;
-        transform: translateX(-50%);
-        color: $white;
+
+    @media(max-width:500px) {
+
+        button {
+
+            width: $max-font*5;
+            height: $max-font*5;
+            font-size: $small-font*1.5;
+
+            img {
+                margin-top: 10px;
+            }
 
 
+
+        }
+
+    }
+
+    @media (min-width:300px) and (orientation: landscape) and (max-width:800px) {
+        button {
+            top: 25%;
+            width: $max-font*5;
+            height: $max-font*5;
+            font-size: $small-font*1.5;
+
+            img {
+                margin-top: 10px;
+            }
+
+
+
+        }
+    }
+
+    @media (min-width:800px) and (orientation: landscape) and (max-width:1000px) {
+        button {
+            top: 25%;
+
+
+
+
+
+        }
+    }
+}
+
+@media(max-width:300px) {
+
+    header {
+        max-width: 290px;
     }
 }

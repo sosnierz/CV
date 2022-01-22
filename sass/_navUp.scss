@@ -2,6 +2,7 @@ nav.navUp {
     grid-area: lang;
     position: relative;
     background-color: $white;
+    max-width: $width-max-template;
 
     div.burger {
         position: absolute;
@@ -46,4 +47,14 @@ nav.navUp {
     nav.navUp div.burger i.fas {
         display: none;
     }
+}
+
+@media(max-width: 300px) {
+
+
+    nav.navUp {
+        max-width: 290px;
+    }
+
+
 }

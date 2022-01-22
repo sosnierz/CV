@@ -81,7 +81,7 @@ nav.navUp img {
   cursor: pointer;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   nav.navUp div.burger i.fas.showNav {
     display: block;
   }
@@ -177,7 +177,7 @@ nav.nav-menu div ul li a.activeNav {
   border-bottom: 1px solid #5b4288;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   nav.nav-menu {
     position: absolute;
     top: 35px;
@@ -238,8 +238,13 @@ main section.about-me {
   max-height: 90vh;
 }
 
+main section.about-me article {
+  max-width: 100%;
+}
+
 main section.about-me article div {
-  max-width: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 main section.about-me article div.image img {
@@ -251,7 +256,7 @@ main section.about-me article div.image img {
 }
 
 main section.about-me article div.about-me-txt {
-  padding: 10px auto;
+  padding: 10px 20px;
   text-align: justify;
 }
 
@@ -267,6 +272,15 @@ main section.about-me article div.about-me-txt p:last-of-type::first-letter {
   font-weight: bold;
   color: #1eb79c;
   font-size: 45px;
+}
+
+@media (max-width: 980px) {
+  main section.about-me article div.about-me-txt p,
+  main section.about-me article div.about-me-txt p ul li {
+    letter-spacing: 1px;
+    line-height: normal;
+    font-size: 10px;
+  }
 }
 
 main section.projects .projects-contains {
@@ -381,6 +395,13 @@ main section.skills ul li img {
   height: 170px;
 }
 
+@media (max-width: 980px) {
+  main section.skills ul li img {
+    max-width: 140px;
+    max-height: 140px;
+  }
+}
+
 main section.experiences div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,14 +507,14 @@ main section.experiences div .grow div.modal-active ul li {
 
 @media (max-width: 980px) {
   main section.experiences div,
-  main article.experience {
-    -webkit-box-orient: horizontal;
+  main section.experiences div article.experience {
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   main section.experiences div article.experience,
-  main article.experience article.experience {
+  main section.experiences div article.experience article.experience {
     max-width: 90%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -633,7 +654,7 @@ body div.container {
   overflow: hidden;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   body div.container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

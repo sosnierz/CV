@@ -11,21 +11,14 @@ body {
     padding: 0;
     box-sizing: border-box;
 
-
-
-
     div.container {
         @include grid-template;
         font-family: $font-main;
         overflow: hidden;
     }
-
-
-
-
 }
 
-@media(max-width:1100px) {
+@media(max-width:1200px) {
     body div.container {
         grid-template-columns: 1fr;
     }

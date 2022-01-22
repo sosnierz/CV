@@ -9,6 +9,12 @@ main {
         @include heading;
     }
 
+    @media(max-width:800px) {
+        section h1 {
+            font-size: $medium-font;
+        }
+    }
+
     article {
         @include flex;
         margin-top: 60px;
@@ -16,7 +22,7 @@ main {
 
     section.about-me {
         min-height: 70vh;
-        max-height: 90vh;
+
 
         article {
             max-width: 100%;
@@ -57,20 +63,44 @@ main {
 
     @media(max-width:980px) {
 
-        section.about-me article div.about-me-txt p,
-        section.about-me article div.about-me-txt p ul li {
-            letter-spacing: 1px;
-            line-height: normal;
-            font-size: $small-font;
+        section.about-me article div.about-me-txt {
+
+            p,
+            ul {
+
+                line-height: 30px;
+                font-size: $small-font*1.5;
+
+                li {
+                    font-size: $small-font*1.5;
+                }
+            }
+
+
+        }
+
+    }
+
+    @media(max-width:700px) {
+
+        section.about-me article {
+            flex-direction: column;
+
+            div.image {
+                flex-basis: 35%;
+
+                img {
+                    margin-top: 2%;
+                }
+
+            }
+
         }
 
 
     }
 
-
-
     section.projects {
-
 
         .projects-contains {
             display: grid;
@@ -153,7 +183,7 @@ main {
     }
 
     section.skills {
-        min-height: 80vh;
+        min-height: 60vh;
 
         ul {
             @include flex;
@@ -182,6 +212,12 @@ main {
         section.skills ul li img {
             max-width: 140px;
             max-height: 140px;
+        }
+    }
+
+    @media(max-width:700px) {
+        section.skills ul li {
+            flex-basis: 40%
         }
     }
 
@@ -336,6 +372,7 @@ main {
             .socials {
                 flex-basis: 48%;
                 font-size: 0;
+                padding-left: 10px;
 
 
 
@@ -367,6 +404,18 @@ main {
 
 
                 }
+            }
+        }
+    }
+
+    @media(max-width:700px) {
+        section.contact {
+            background-color: black;
+            padding: 30px 20px;
+
+            div.wrap {
+                flex-direction: column;
+
             }
         }
     }

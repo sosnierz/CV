@@ -88,7 +88,7 @@ if (scrollValue > topExper+ expersHeight - windowHeight) {
     $experience.each(function(i){
         setTimeout(() => { 
             $(this).attr("style", "transform: scale(1) ")
-        }, i*300);
+        }, i*100);
        
     })
 
@@ -105,7 +105,7 @@ $('.nav-menu a').on('click', function () {
     })
 })
 
-// ul experiencews show up
+// ul experiences show up
 
 $('article.experience').mouseenter(function() {
     $(this).toggleClass('grow');

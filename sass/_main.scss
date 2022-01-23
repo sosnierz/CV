@@ -127,34 +127,38 @@ main {
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 30px;
 
-            div.project {
-                display: flex;
-                min-height: 250px;
-                background: $gradient;
-                padding: 10px;
-                transition: 0.5s;
+            a {
+                display: block;
+                text-decoration: none;
+                color: $white;
 
-                div {
-                    flex-basis: 50%;
+                &:hover {
+                    color: $black;
                 }
 
-                div.web img {
-                    max-width: 100%;
-                    min-height: 100%;
-                }
+                div.project {
+                    display: flex;
+                    flex-direction: row;
+                    min-height: 250px;
+                    background: $gradient;
+                    padding: 10px;
+                    transition: 0.5s;
 
-                .about {
-                    color: $white;
-                    padding: 10px 20px 20px 0;
-                    text-align: left;
 
-                    a {
-                        text-decoration: none;
+
+                    div {
+                        flex-basis: 50%;
+                    }
+
+                    div.web img {
+                        max-width: 100%;
+                        min-height: 100%;
+                    }
+
+                    .about {
                         color: $white;
-
-                        &:hover {
-                            color: $black;
-                        }
+                        padding: 10px 20px 20px 0;
+                        text-align: left;
 
                         h2 {
                             font-size: 18px;
@@ -165,30 +169,35 @@ main {
 
 
                         }
-                    }
 
-                    p {
-                        font-size: 12px;
-                        padding-left: 20px;
+
+                        p {
+                            font-size: 12px;
+                            padding-left: 20px;
+                        }
                     }
                 }
             }
 
-            div.project:nth-of-type(odd) {
+
+
+            a div.project:nth-of-type(odd) {
                 grid-column: 1 / -2;
                 transform: translateX(-100vw);
             }
 
-            div.project:nth-of-type(even) {
+            a div.project:nth-of-type(even) {
                 grid-column: 2 / -1;
                 transform: translateX(100vw);
             }
 
-            div.project.active:nth-of-type(odd),
-            div.project.active:nth-of-type(even) {
+            a div.project.active:nth-of-type(odd),
+            a div.project.active:nth-of-type(even) {
                 transform: translateX(0);
             }
+
         }
+
 
 
         @media(max-width: 980px) {

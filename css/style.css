@@ -389,10 +389,24 @@ main section.projects .projects-contains {
   grid-gap: 30px;
 }
 
-main section.projects .projects-contains div.project {
+main section.projects .projects-contains a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+main section.projects .projects-contains a:hover {
+  color: #5b4288;
+}
+
+main section.projects .projects-contains a div.project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   min-height: 250px;
   background: linear-gradient(135deg, #1abc9c 0%, #8e44ad 100%);
   padding: 10px;
@@ -400,32 +414,23 @@ main section.projects .projects-contains div.project {
   transition: 0.5s;
 }
 
-main section.projects .projects-contains div.project div {
+main section.projects .projects-contains a div.project div {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
-main section.projects .projects-contains div.project div.web img {
+main section.projects .projects-contains a div.project div.web img {
   max-width: 100%;
   min-height: 100%;
 }
 
-main section.projects .projects-contains div.project .about {
+main section.projects .projects-contains a div.project .about {
   color: white;
   padding: 10px 20px 20px 0;
   text-align: left;
 }
 
-main section.projects .projects-contains div.project .about a {
-  text-decoration: none;
-  color: white;
-}
-
-main section.projects .projects-contains div.project .about a:hover {
-  color: #5b4288;
-}
-
-main section.projects .projects-contains div.project .about a h2 {
+main section.projects .projects-contains a div.project .about h2 {
   font-size: 18px;
   border-bottom: 2px solid white;
   margin-bottom: 12px;
@@ -433,25 +438,25 @@ main section.projects .projects-contains div.project .about a h2 {
   text-indent: 20px;
 }
 
-main section.projects .projects-contains div.project .about p {
+main section.projects .projects-contains a div.project .about p {
   font-size: 12px;
   padding-left: 20px;
 }
 
-main section.projects .projects-contains div.project:nth-of-type(odd) {
+main section.projects .projects-contains a div.project:nth-of-type(odd) {
   grid-column: 1 / -2;
   -webkit-transform: translateX(-100vw);
           transform: translateX(-100vw);
 }
 
-main section.projects .projects-contains div.project:nth-of-type(even) {
+main section.projects .projects-contains a div.project:nth-of-type(even) {
   grid-column: 2 / -1;
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
 }
 
-main section.projects .projects-contains div.project.active:nth-of-type(odd),
-main section.projects .projects-contains div.project.active:nth-of-type(even) {
+main section.projects .projects-contains a div.project.active:nth-of-type(odd),
+main section.projects .projects-contains a div.project.active:nth-of-type(even) {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }

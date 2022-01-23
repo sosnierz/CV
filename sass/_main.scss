@@ -24,21 +24,17 @@ main {
     article {
         @include flex;
         align-items: stretch;
-
-
         margin-top: 60px;
     }
 
     section.about-me {
         min-height: 70vh;
 
-
         article {
             max-width: 100%;
 
             div {
                 flex-basis: 50%;
-
             }
 
             div.image img {
@@ -47,13 +43,11 @@ main {
                 max-height: 60%;
                 border-radius: 50%;
                 margin: 12% auto;
-
             }
 
             div.about-me-txt {
                 padding: 10px 20px;
                 text-align: justify;
-
 
                 p,
                 ul {
@@ -66,17 +60,14 @@ main {
                     @include firstLetter;
                 }
             }
-
         }
 
         @media(max-width:980px) {
-
             article div.about-me-txt {
                 text-align: left;
 
                 p,
                 ul {
-
                     line-height: 30px;
                     font-size: $small-font*1.5;
 
@@ -93,7 +84,6 @@ main {
         }
 
         @media(max-width:700px) {
-
             article {
                 flex-direction: column;
 
@@ -130,7 +120,6 @@ main {
         }
     }
 
-
     section.projects {
         .projects-contains {
             display: grid;
@@ -138,7 +127,6 @@ main {
             grid-gap: 30px;
 
             div.project {
-
                 min-height: 250px;
                 background: $gradient;
                 padding: 10px;
@@ -173,10 +161,7 @@ main {
                             margin-bottom: 12px;
                             padding-bottom: 6px;
                             text-indent: 20px;
-
-
                         }
-
 
                         p {
                             font-size: 12px;
@@ -248,34 +233,32 @@ main {
                 }
             }
         }
-    }
 
-    @media(max-width:980px) {
-        section.skills ul {
-            margin-top: 10%;
-
-            li {
+        @media(max-width:980px) {
+            ul {
                 margin-top: 10%;
+
+                li {
+                    margin-top: 10%;
+                }
+            }
+        }
+
+        @media(max-width:700px) {
+            ul li {
+                flex-basis: 40%
+            }
+        }
+
+        @media(max-width:500px) {
+            ul li img {
+                width: 60px;
+                height: 60px;
             }
         }
     }
 
-    @media(max-width:700px) {
-        section.skills ul li {
-            flex-basis: 40%
-        }
-    }
-
-    @media(max-width:500px) {
-        section.skills ul li img {
-            width: 60px;
-            height: 60px;
-        }
-
-    }
-
     section.experiences {
-
         div {
             @include flex;
 
@@ -338,11 +321,9 @@ main {
                     display: block;
                     align-self: stretch;
 
-
                     ul {
                         margin-top: 20px;
                         padding: 20px;
-
 
                         li {
                             color: white;
@@ -354,25 +335,21 @@ main {
             }
         }
 
-    }
 
-    @media(max-width: 980px) {
+        @media(max-width: 980px) {
 
-        section.experiences div,
-        section.experiences div article.experience {
-            flex-direction: column;
+            div {
+                flex-direction: column;
 
-
-            article.experience {
-                max-width: 90%;
-                align-items: center;
-                text-align: center;
-                margin: 10px 30px;
-                transition: 0.1s;
+                article.experience {
+                    max-width: 90%;
+                    align-items: center;
+                    text-align: center;
+                    margin: 10px 30px;
+                    transition: 0.1s;
+                }
             }
         }
-
-
     }
 
     section.contact {
@@ -403,7 +380,6 @@ main {
 
                 input {
                     height: 36px;
-
                 }
 
                 textarea {
@@ -429,8 +405,6 @@ main {
                 font-size: 0;
                 padding-left: 10px;
 
-
-
                 .social {
                     padding: 10px 0;
                     @include flex;
@@ -453,28 +427,19 @@ main {
                         padding-left: 30px;
                         font-size: 15px;
                         letter-spacing: 2px;
-
                     }
-
-
-
                 }
             }
         }
-    }
-
-    @media(max-width:830px) {
-        section.contact div.wrap {
-            flex-direction: column;
 
 
+        @media(max-width:830px) {
+            div.wrap {
+                flex-direction: column;
+            }
         }
-    }
 
-    @media(max-width:400px) {
-        section.contact {
-
-
+        @media(max-width:400px) {
 
             div.wrap {
                 padding-top: 10px;
@@ -492,15 +457,11 @@ main {
 
                     input {
                         height: 30px;
-
                     }
                 }
 
                 .socials {
-
                     padding-left: 0px;
-
-
 
                     .social {
                         padding: 8px 0;
@@ -512,66 +473,46 @@ main {
                         }
 
                         a {
-
                             padding-left: 10px;
                             font-size: $small-font;
                             letter-spacing: none;
-
                         }
-
-
-
                     }
                 }
             }
 
-
         }
-    }
 
-    @media(max-width:300px) {
-        section.contact div.wrap {
+        @media(max-width:300px) {
+            div.wrap {
+                form {
 
-            form {
-
-
-                input,
-                button,
-                textarea {
-                    max-width: 80%;
-                    margin: 10px 20px;
+                    input,
+                    button,
+                    textarea {
+                        max-width: 80%;
+                        margin: 10px 20px;
+                    }
                 }
 
-
-            }
-
-            .socials .social {
-                flex-direction: column;
-                align-content: center;
-                align-self: center;
-                width: 80%;
-                margin: 0 auto;
-
-                img,
-                a {
+                .socials .social {
+                    flex-direction: column;
+                    align-content: center;
                     align-self: center;
+                    width: 80%;
+                    margin: 0 auto;
 
+                    img,
+                    a {
+                        align-self: center;
+                    }
+
+                    img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
                 }
-
-                img {
-                    max-width: 40px;
-                    max-height: 40px;
-                }
-
-
-
-
-
-
             }
-
         }
-
-
     }
 }

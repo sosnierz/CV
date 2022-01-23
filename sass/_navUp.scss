@@ -3,7 +3,6 @@ nav.navUp {
     position: relative;
     background-color: $white;
     max-width: $width-max-template;
-
     div.burger {
         position: absolute;
         font-size: $max-font;
@@ -12,17 +11,13 @@ nav.navUp {
         top: 0px;
         left: 10px;
         transition: .3s linear;
-
-
         i.fas {
             display: none;
         }
     }
-
     .burger:hover {
         cursor: pointer;
     }
-
     img {
         height: $max-font;
         display: inline-block;
@@ -32,29 +27,18 @@ nav.navUp {
         right: 5%;
         transform: translateY(-50%);
         cursor: pointer;
-
     }
-
 }
-
 @media(max-width: 1200px) {
-
-
     nav.navUp div.burger i.fas.showNav {
         display: block;
     }
-
     nav.navUp div.burger i.fas {
         display: none;
     }
 }
-
 @media(max-width: 300px) {
-
-
     nav.navUp {
         max-width: 290px;
     }
-
-
 }
